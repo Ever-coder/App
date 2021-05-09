@@ -31,7 +31,7 @@ function checkLocalStorage(){
 // Handling details, add favourite actions
 document.addEventListener('click', (event) => {
     // Details button
-    if(event.target.id == 'details_btn' || event.target.id =="details_img")){
+    if(event.target.id == 'details_btn' || event.target.id =="details_img"){
         var id = event.target.parentNode.id;
         window.open('./details.html'+'?id='+id, "_self");
     }
