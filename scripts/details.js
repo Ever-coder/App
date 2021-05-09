@@ -73,29 +73,41 @@ function renderPage(data){
 
 
     // Powerstats
-    var combat = document.getElementsByClassName('combat');
-    combat[0].innerHTML = `${data.powerstats.combat}`;
-    combat[0].style = `width: ${data.powerstats.combat}%;`;
+   var combat = document.getElementsByClassName('combat');
+    let combatValue = data.powerstats.combat > 0 ? data.powerstats.combat : "N/A";
+    let combatPercent = data.powerstats.combat > 0 ? data.powerstats.combat : 0;
+    combat[0].innerHTML = `${combatValue}`;
+    combat[0].style = `width: ${combatPercent}%;`;
 
     var durability = document.getElementsByClassName('durability');
-    durability[0].innerHTML = `${data.powerstats.durability}`;
-    durability[0].style = `width: ${data.powerstats.durability}%;`;
+    let durabilityValue = data.powerstats.durability > 0 ? data.powerstats.durability : "N/A";
+    let durabilityPercent = data.powerstats.durability > 0 ? data.powerstats.durability : 0;
+    durability[0].innerHTML = `${durabilityValue}`;
+    durability[0].style = `width: ${durabilityPercent}%;`;
 
     var intelligence = document.getElementsByClassName('intelligence');
-    intelligence[0].innerHTML = `${data.powerstats.intelligence}`;
-    intelligence[0].style = `width: ${data.powerstats.intelligence}%;`;
+    let intelligenceValue = data.powerstats.intelligence > 0 ? data.powerstats.intelligence : "N/A";
+    let intelligencePercent = data.powerstats.intelligence > 0 ? data.powerstats.intelligence : 0;
+    intelligence[0].innerHTML = `${intelligenceValue}`;
+    intelligence[0].style = `width: ${intelligencePercent}%;`;
 
     var power = document.getElementsByClassName('power');
-    power[0].innerHTML = `${data.powerstats.power}`;
-    power[0].style = `width: ${data.powerstats.power}%;`;
+    let powerValue = data.powerstats.power > 0 ? data.powerstats.power : "N/A";
+    let powerPercent = data.powerstats.power > 0 ? data.powerstats.power : 0;
+    power[0].innerHTML = `${powerValue}`;
+    power[0].style = `width: ${powerPercent}%;`;
 
     var speed = document.getElementsByClassName('speed');
-    speed[0].innerHTML = `${data.powerstats.speed}`;
-    speed[0].style = `width: ${data.powerstats.speed}%;`;
+    let speedValue = data.powerstats.speed > 0 ? data.powerstats.speed : "N/A";
+    let speedPercent = data.powerstats.speed > 0 ? data.powerstats.speed : 0;
+    speed[0].innerHTML = `${speedValue}`;
+    speed[0].style = `width: ${speedPercent}%;`;
 
     var strength = document.getElementsByClassName('strength');
-    strength[0].innerHTML = `${data.powerstats.strength}`;
-    strength[0].style = `width: ${data.powerstats.strength}%;`;
+    let strengthValue = data.powerstats.strength > 0 ? data.powerstats.strength : "N/A";
+    let strengthPercent = data.powerstats.strength > 0 ? data.powerstats.strength : 0;
+    strength[0].innerHTML = `${strengthValue}`;
+    strength[0].style = `width: ${strengthPercent}%;`;
 
     // Appearance
     document.getElementById('appearance').innerHTML = makePresentable(data.appearance);
