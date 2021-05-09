@@ -31,7 +31,7 @@ function checkLocalStorage(){
 // Handling details, add favourite actions
 document.addEventListener('click', (event) => {
     // Details button
-    if(event.target.id == 'details_btn'){
+    if(event.target.id == 'details_btn' || event.target.id =="details_img")){
         var id = event.target.parentNode.id;
         window.open('./details.html'+'?id='+id, "_self");
     }
@@ -108,7 +108,7 @@ function getCard(data){
     }
     cardContainer.innerHTML = `
 
-        <div class="card-img-container">
+        <div class="card-img-container" id=${data.id}>
          <img id="details_btn" src="${data.image.url}">
         </div>
         <div id="details_btn" class="card-name">${data.id}, ${data.name}</div>
