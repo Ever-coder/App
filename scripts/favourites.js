@@ -96,22 +96,22 @@ function renderCard(data){
 
             <div id="stat-bars">
                 <div class="bar-container">
-                    <div class="bar combat" style="width: ${data.powerstats.combat}%;">${data.powerstats.combat}</div>
+                    <div class="bar combat" style="width: ${ data.powerstats.combat > 0 ? data.powerstats.combat : 0}%;">${data.powerstats.combat > 0 ? data.powerstats.combat : "N/A"}</div>
                 </div>
                 <div class="bar-container">
-                    <div class="bar durability" style="width: ${data.powerstats.durability}%;">${data.powerstats.durability}</div>
+                    <div class="bar durability" style="width: ${data.powerstats.durability > 0 ? data.powerstats.durability : 0}%;">${data.powerstats.durability > 0 ? data.powerstats.durability : "N/A"}</div>
                 </div>
                 <div class="bar-container">
-                    <div class="bar intelligence" style="width: ${data.powerstats.intelligence}%;">${data.powerstats.intelligence}</div>
+                    <div class="bar intelligence" style="width: ${data.powerstats.intelligence > 0 ? data.powerstats.intelligence : 0}%;">${data.powerstats.intelligence > 0 ? data.powerstats.intelligence : "N/A"}</div>
                 </div>
                 <div class="bar-container">
-                    <div class="bar power" style="width: ${data.powerstats.power}%;">${data.powerstats.power}</div>
+                    <div class="bar power" style="width: ${data.powerstats.power > 0 ? data.powerstats.power : 0}%;">${data.powerstats.power > 0 ? data.powerstats.power : "N/A"}</div>
                 </div>
                 <div class="bar-container">
-                    <div class="bar speed" style="width: ${data.powerstats.speed}%;">${data.powerstats.speed}</div>
+                    <div class="bar speed" style="width: ${data.powerstats.speed > 0 ? data.powerstats.speed : 0}%;">${data.powerstats.speed > 0 ? data.powerstats.speed : "N/A"}</div>
                 </div>
                 <div class="bar-container">
-                    <div class="bar strength" style="width: ${data.powerstats.strength}%;">${data.powerstats.strength}</div>
+                    <div class="bar strength" style="width: ${data.powerstats.strength > 0 ? data.powerstats.strength : 0}%;">${data.powerstats.strength > 0 ? data.powerstats.strength : "N/A"}</div>
                 </div>
             </div>
         </div>
