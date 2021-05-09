@@ -109,7 +109,7 @@ function getCard(data){
     cardContainer.innerHTML = `
 
         <div class="card-img-container" id=${data.id}>
-         <img id="details_btn" src="${data.image.url}">
+         <img id="details_img" src="${data.image.url}">
         </div>
         <div id="details_btn" class="card-name">${data.id}, ${data.name}</div>
         <div id="details_btn" class="card-name">${data.appearance.gender}</div>
