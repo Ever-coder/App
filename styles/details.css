@@ -144,14 +144,22 @@ header button a{
     display: block;
     height: 200px; /*same height as header*/
     margin-top: -200px; /*same height as header*/
+    width: 50px;
+    visibility: hidden;
+}
+.anchor1{
+    display: block;
+    height: 200px; /*same height as header*/
+    margin-top: -200px; /*same height as header*/
+    width: 50px;
     visibility: hidden;
 }
 
 
 #data-container{
     position: relative;
-    margin-top: 200px;
-    width: 100%;
+    margin-top: 180px;
+    width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -164,9 +172,10 @@ header button a{
     display: flex;
     flex-direction: column;
     width: 25%;
-    margin-left: 30px;
+    margin-left: 150px;
     padding: 100px;
     align-items: center;
+
 }
 
 #imagen{
@@ -184,16 +193,28 @@ header button a{
 
 #detail-container{
     position: relative;
-    width: 70%;
+    width: 100%;
 }
 
 .detail-item{
     padding: 20px;
-    width: 80%;
-     border-width: 5px;
+    width: 120%;
+    border-width: 5px;
     border-color: #16A085;
     border-style: ridge;
     border-radius: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.detail-item1{
+    padding: 20px;
+    width: 80%;
+    border-width: 5px;
+    border-color: #16A085;
+    border-style: ridge;
+    border-radius: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 #stats-container{
