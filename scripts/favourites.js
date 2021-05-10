@@ -22,7 +22,7 @@ function driver(){
 // Handling details, add favourite actions
 document.addEventListener('click', (event) => {
     // Details button
-    if(event.target.id == 'details_btn'){
+    if(event.target.id == 'details_btn' || event.target.id =="details_img"){
         var id = event.target.parentNode.id;
         window.open('./details.html'+'?id='+id, "_self");
     }
@@ -75,8 +75,8 @@ function renderCard(data){
     }
     cardContainer.innerHTML = `
         
-        <div class="card-img-container">
-            <img src="${data.image.url}">
+        <div class="card-img-container"  id=${data.id}>
+            <img id="details_img" src="${data.image.url}">
         </div>
         <div id="details_btn" class="card-name" style='color:black;'>${data.id}, ${data.name}, ${data.appearance.gender}</div>
         <div id="details_btn" class="card-name"></div>
