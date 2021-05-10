@@ -134,7 +134,7 @@ header *{
     border-style: groove;
     border-radius: 15px;
     box-shadow: 10px 0px 15px 0px #48C9B0;
-    background: #E5E8E8;
+    background: #A3E4D7;
 }
 
 .card-img-container img{
@@ -144,7 +144,7 @@ header *{
     border-color: gray;
     border-style: ridge;
     border-radius: 15px;
-    background: #E5E8E8;
+    background: #A3E4D7;
 
 }
 
@@ -152,7 +152,7 @@ header *{
     padding: 4px;
     padding-top: 8px;
     font-size: 1.4rem;
-    background: #E5E8E8
+    background: #A3E4D7;
 }
 
 .card-name:hover{
@@ -175,20 +175,20 @@ header *{
     flex-direction: column;
     width: fit-content;
     padding-right: 10px;
-    background: #E5E8E8;
+    background: #A3E4D7;
 }
 
 #stat-names span{
     display: block;
     padding: 5px;
     padding-left: 15px;
-    background: #E5E8E8;
+    background: #A3E4D7;
 }
 
 #stat-bars{
     width: 90%;
     font-size: .9rem;
-    background: #E5E8E8;
+    background: #A3E4D7;
 }
 
 .bar-container{
