@@ -22,7 +22,7 @@ function driver(){
 // Handling details, add favourite actions
 document.addEventListener('click', (event) => {
     // Details button
-    if(event.target.id == 'details_btn'){
+    if(event.target.id == 'details_btn' || event.target.id =="details_img"){
         var id = event.target.parentNode.id;
         window.open('./details.html'+'?id='+id, "_self");
     }
@@ -75,8 +75,8 @@ function renderCard(data){
     }
     cardContainer.innerHTML = `
         
-        <div class="card-img-container">
-            <img src="${data.image.url}">
+        <div class="card-img-container"  id=${data.id}>
+            <img id="details_img" src="${data.image.url}">
         </div>
         <div id="details_btn" class="card-name" style='color:black;'>${data.id}, ${data.name}, ${data.appearance.gender}</div>
         <div id="details_btn" class="card-name"></div>
@@ -84,7 +84,7 @@ function renderCard(data){
             <img id="add_fav_btn" src="${srcFav}" width="25"><br>
         </div>
     
-        <div id="stats-container">
+        <div id="stats-container" >
             <div id="stat-names">
                 <span style='color:black;'>Combate</span>
                 <span style='color:black;'>Durabilidad</span>
@@ -93,25 +93,24 @@ function renderCard(data){
                 <span style='color:black;'>Velocidad</span>
                 <span style='color:black;'>Fuerza</span>
             </div>
-
             <div id="stat-bars">
                 <div class="bar-container">
-                    <div class="bar combat" style="width: ${data.powerstats.combat}%;">${data.powerstats.combat}</div>
+                    <div class="bar combat" style="width: ${ data.powerstats.combat > 0 ? data.powerstats.combat : 0}%;">${data.powerstats.combat > 0 ? data.powerstats.combat : "N/A"}</div>
                 </div>
                 <div class="bar-container">
-                    <div class="bar durability" style="width: ${data.powerstats.durability}%;">${data.powerstats.durability}</div>
+                    <div class="bar durability" style="width: ${data.powerstats.durability > 0 ? data.powerstats.durability : 0}%;">${data.powerstats.durability > 0 ? data.powerstats.durability : "N/A"}</div>
                 </div>
                 <div class="bar-container">
-                    <div class="bar intelligence" style="width: ${data.powerstats.intelligence}%;">${data.powerstats.intelligence}</div>
+                    <div class="bar intelligence" style="width: ${data.powerstats.intelligence > 0 ? data.powerstats.intelligence : 0}%;">${data.powerstats.intelligence > 0 ? data.powerstats.intelligence : "N/A"}</div>
                 </div>
                 <div class="bar-container">
-                    <div class="bar power" style="width: ${data.powerstats.power}%;">${data.powerstats.power}</div>
+                    <div class="bar power" style="width: ${data.powerstats.power > 0 ? data.powerstats.power : 0}%;">${data.powerstats.power > 0 ? data.powerstats.power : "N/A"}</div>
                 </div>
                 <div class="bar-container">
-                    <div class="bar speed" style="width: ${data.powerstats.speed}%;">${data.powerstats.speed}</div>
+                    <div class="bar speed" style="width: ${data.powerstats.speed > 0 ? data.powerstats.speed : 0}%;">${data.powerstats.speed > 0 ? data.powerstats.speed : "N/A"}</div>
                 </div>
                 <div class="bar-container">
-                    <div class="bar strength" style="width: ${data.powerstats.strength}%;">${data.powerstats.strength}</div>
+                    <div class="bar strength" style="width: ${data.powerstats.strength > 0 ? data.powerstats.strength : 0}%;">${data.powerstats.strength > 0 ? data.powerstats.strength : "N/A"}</div>
                 </div>
             </div>
         </div>
